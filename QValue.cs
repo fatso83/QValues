@@ -134,20 +134,20 @@ namespace CSharpVitamins
 		/// weigth (qvalue)
 		/// </summary>
 		/// <param name="value">The string to parse</param>
-		static void ParseInternal(ref QValue target, string value)
-		{
-			string[] parts = value.Split(delimiters, 3);
-			if (parts.Length > 0)
-			{
-				target._name = parts[0].Trim();
-				target._weight = defaultWeight;
-			}
+        static void ParseInternal(ref QValue target, string value)
+        {
+            string[] parts = value.Split(delimiters, 3);
+            if (parts.Length > 0)
+            {
+                target._name = parts[0].Trim();
+                target._weight = defaultWeight;
+            }
 
-			if (parts.Length == 3)
-			{
-				float.TryParse(parts[2], out target._weight);
-			}
-		}
+            if (parts.Length == 3)
+            {
+                float.TryParse(parts[2], NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture.NumberFormat, out target._weight);
+            }
+        }
 
 		#endregion
 
