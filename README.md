@@ -1,9 +1,17 @@
 # QValues
-> Dave Transom's QValue lib for accepted encodings stored for easier retrieval
+> Utility classes for correctly parsing `Accept-Encodings` 
 
-See [Dave's original article](http://www.singular.co.nz/2008/07/finding-preferred-accept-encoding-header-in-csharp/) 
-on why parsing `Accept-Encoding` with `String#contains` 
+Utility classes for [RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html)
+compliant parsing of the `Accept-Encoding` header.
+
+## Background
+Dave Transom's blog post on [What's wrong with `Request.Headers["Accept-Encoding"].Contains("gzip")`?](http://www.singular.co.nz/2008/07/finding-preferred-accept-encoding-header-in-csharp/) 
+goes into detail on why parsing `Accept-Encoding` with `String#contains` 
 is a malpractice that has some downsides you should be aware of. 
+
+His article also contains some nice utility classes that does what 
+thousand of sites do wrong, which is what I have put up here, along
+with some bug fixes.
 
 ## Typical usage
 ```cs
