@@ -2,7 +2,7 @@
 > Utility classes for correctly parsing `Accept-Encodings` 
 
 Utility classes for [RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html)
-compliant parsing of the `Accept-Encoding` header.
+compliant parsing of the `Accept-Encoding`, `Accept-Charset` and `Accept-Language` header.
 
 ## Background
 Dave Transom's blog post on [What's wrong with `Request.Headers["Accept-Encoding"].Contains("gzip")`?](http://www.singular.co.nz/2008/07/finding-preferred-accept-encoding-header-in-csharp/) 
