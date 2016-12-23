@@ -5,7 +5,7 @@ namespace CSharpVitamins
 	using System;
 	using System.Collections.Generic;
 	using System.Diagnostics;
-	using System.Text;
+	using System.Globalization;
 
 	/// <summary>
 	/// Represents a weighted value (or quality value) from an http header e.g. gzip=0.9; deflate; x-gzip=0.5;
